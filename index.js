@@ -4,7 +4,7 @@ require('dotenv').config();
 
 const bodyParser = require('body-parser');
 const express = require('express');
-const morgan = require('morgan');
+// const morgan = require('morgan');
 const app = express();
 const PORT = process.env.PORT || 3333;
 const datasets = require('./datasets');
@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // use morgan logger middleware
-app.use(morgan('dev'));
+// app.use(morgan('dev'));
 
 app.get('/', (req, res)=>{
     res.json({
